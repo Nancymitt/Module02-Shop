@@ -5,7 +5,7 @@ $orange: #d26a22;
 $white: #ffffff;
 
 $font-jost: 'Jost', sans-serif;
-$font-cormoran: 'Cormorant', serif;
+$font-cormorant: 'Cormorant', serif;
 
 html {
     font-size: 10px;
@@ -13,17 +13,16 @@ html {
 body {
     font-size: 1.6rem;
     font-family: $font-jost;
+    color: $green;
 }
 
 .header {
     max-width: 1440px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
 
     &__nav {
         display: flex;
@@ -33,7 +32,6 @@ body {
         gap: 4.8rem;
     }
     &__link {
-        font-size: 1.6rem;
         color: $green;
         text-decoration: none;
         &:hover {
@@ -41,10 +39,10 @@ body {
         }
     }
     &__tel {
-        font-size: 1.6rem;
         font-weight: 500;
         color: $green;
         text-decoration: none;
+        letter-spacing: .13rem;
         &:hover {
             color: $orange;
         }
@@ -61,6 +59,8 @@ body {
         background-position: center center;
         position: relative;
         border: 1px solid $orange;
+        cursor: pointer;
+
         &:hover {
             background-color: $green;
             border: 1px solid $green;
@@ -83,3 +83,54 @@ body {
     width: 12.3rem;
     height: 3.2rem;
 }
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main {
+    background-image: url(../images/main.png);
+    background-size: cover;
+    background-position-x: center;
+    &__item {
+        margin-left: 12rem;
+        max-width: 378px;
+        margin-top: 6rem;
+    }
+    &__link {
+        margin-top: 6rem;
+    }
+}
+.title {
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    margin: 0;
+    &__span {
+        font-style: italic;
+    }
+    &_block {
+        .title__span {
+            display: block;
+        }
+    }
+}
+.description {
+    margin: 0;
+    &_size-s {
+        font-style: 1.8rem;
+    }
+}
+.link {
+    color: $white;
+    text-transform: uppercase;
+    padding: 2.5rem 4.2rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 3.8rem;
+    display: inline-block;
+}
+
+  
