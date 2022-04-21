@@ -28,6 +28,10 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 5%;
+    &__navigation {
+        flex-grow: 1;
+        margin-left: 4.5rem;
+    }
     &__nav {
         display: flex;
         list-style-type: none;
@@ -46,6 +50,7 @@ body {
     }
     &__tel {
         font-weight: 500;
+        flex-basis: 160px;
         color: $green;
         text-decoration: none;
         flex-basis: 160px;
@@ -59,7 +64,7 @@ body {
     &__cart {
         padding: 0;
         display: block;
-        width: 4rem;
+        flex-basis: 4rem;
         height: 4rem;
         border-radius: 100%;
         background-image: url(../images/cart.svg);
@@ -91,7 +96,7 @@ body {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 12rem;
+    flex-basis: 12rem;
     height: 3.2rem;
 }
 .container {
@@ -143,6 +148,8 @@ body {
         width: 92%;
         border-radius: 100%;
         box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
+        animation: shadow 20s linear 1;
+        
     }
     &__text {
         padding-top: 4rem;
@@ -974,4 +981,17 @@ footer {
         }
     }
 
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow:0 0 0 0 rgb(0 0 0 / 51%);
+    }
+    50% {
+        box-shadow:0 0 0 0 rgb(0 0 0 / 51%);
+        transform: rotate(180deg);
+    }
+    100% {
+        box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
+    }
 }
