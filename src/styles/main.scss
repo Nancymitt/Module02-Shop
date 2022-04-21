@@ -147,9 +147,7 @@ body {
     &__image {
         width: 92%;
         border-radius: 100%;
-        box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
-        animation: shadow 20s linear 1;
-        
+        animation: shadow 7s ease-in-out 1 forwards;        
     }
     &__text {
         padding-top: 4rem;
@@ -986,12 +984,19 @@ footer {
 @keyframes shadow {
     0% {
         box-shadow:0 0 0 0 rgb(0 0 0 / 51%);
+    }    
+    100% {
+        box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
     }
     50% {
-        box-shadow:0 0 0 0 rgb(0 0 0 / 51%);
         transform: rotate(180deg);
     }
     100% {
-        box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
+        transform: rotate(0deg);
     }
 }
