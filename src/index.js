@@ -8,7 +8,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 var swiper = new Swiper(".offerSwiper", {
     slidesPerView: 3,
-    spaceBetween: 15,
+    spaceBetween: 30,
     slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
@@ -26,7 +26,7 @@ var swiper = new Swiper(".offerSwiper", {
         slidesPerView: 1,
         slidesPerGroup: 1
       },
-      600: {
+      768: {
           slidesPerView: 2,
           slidesPerGroup: 2
       },
@@ -38,7 +38,7 @@ var swiper = new Swiper(".offerSwiper", {
 });
 var swiper = new Swiper(".trendsSwiper", {
   slidesPerView: 3,
-  spaceBetween: 15,
+  spaceBetween: 30,
   slidesPerGroup: 3,
   loop: true,
   loopFillGroupWithBlank: true,
@@ -56,7 +56,7 @@ var swiper = new Swiper(".trendsSwiper", {
       slidesPerView: 1,
       slidesPerGroup: 1,
     },
-    600: {
+    768: {
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
@@ -66,3 +66,12 @@ var swiper = new Swiper(".trendsSwiper", {
     }
   }
 });
+var swiper = new Swiper(".categorySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
