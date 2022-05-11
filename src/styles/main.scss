@@ -260,6 +260,9 @@ body {
     @media (max-width: $r_tab) {
         padding-bottom: 3rem;
     }
+    @media (max-width: $r_mob_400) {
+        padding-bottom: 5rem;
+    }
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -979,6 +982,7 @@ body {
     padding-bottom: 10rem;
     @media (max-width: $r_mob_360) {
         padding-bottom: 3rem;
+        padding-top: 5.5rem;
     }    
     &__box {
         margin-top: 7rem;
@@ -1108,7 +1112,7 @@ body {
         padding-bottom: 4rem;
     }
     @media (max-width: $r_mob_360) {
-        padding-top: 5rem;
+        padding-top: 9rem;
         padding-bottom: 6.5rem;
     }
 
@@ -1140,6 +1144,10 @@ body {
         font-weight: 500;
         transition: .2s;
         cursor: pointer;
+        @media (max-width: $r_mob_360) {
+            font-size: 1.25rem;
+            margin-top: 4.5rem;
+        }
         &:hover {
             opacity: 1;
         }
@@ -1258,12 +1266,21 @@ body {
         }
         @media (max-width: $r_mob_500) {
            // padding: 1.5rem 1.5rem;
-           padding: 1.2rem 1rem 1.8rem;
-            text-align: center;
+            padding: 1.2rem 1rem 1.8rem;
+            text-align: center;            
         }
+        @media (max-width: 400px) {
+            padding: 1rem 0.7rem 2rem;
+        }
+        
        &:hover {
         box-shadow: 0 0 0 2px rgba($green, .4) inset;
        }
+    }
+    &__item:nth-child(n+5) {
+        @media (max-width: $r_mob_500) {
+        display: none;
+        }
     }
     &__cover {
         position: relative;
@@ -1298,6 +1315,7 @@ body {
         }
         @media (max-width: $r_mob_500) {
             margin-top: 0.6rem;
+            font-size: 1.75rem;
         }
     }
     &__description {
@@ -1339,6 +1357,10 @@ body {
 .delivery {
     padding-top: 6.8rem;
     padding-bottom: 6rem;
+    @media (max-width: $r_mob_360) {
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
     &__box {
         font-size: 1.8rem;
         line-height: 1.5;
@@ -1527,7 +1549,7 @@ body {
                 font-size: 1.6rem;
             }
             @media (max-width: $r_mob_360) {
-                margin-bottom: 3.5rem;
+                margin-bottom: 2.5rem;
             }         
         }
         &__link {
