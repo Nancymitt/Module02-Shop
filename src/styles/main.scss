@@ -459,18 +459,30 @@ body {
         margin-bottom: .5rem;
     }
     &__tomato {
-       position: absolute;
-       bottom: 113px;
-       right: 0px;
-       width: 11rem;
-       z-index: -1;
-       @media (max-width: $r_mob_500) {
-        width: 7rem;
-        bottom: inherit;
-        top: 82px;
-        left: -14px;
-        right: inherit;
+        position: absolute;
+        // bottom: 26px;
+        left: 35%;
+        //    bottom: 113px;
+        //    right: 0px;
+        width: 11rem;
+        z-index: -1;
+        // animation: bouncing 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both; 
+       animation: tomato-fell 2s linear forwards, tomato-animated 3s ease-out forwards 2s, tomato-rotate 3s ease-out 2s;
+       @media (max-width: $r_tab_900) {
+            width: 9rem;
     }
+       @media (max-width: $r_tab) {
+           animation: none;
+           bottom: 3rem;
+            left: 55rem;
+       }
+       @media (max-width: $r_mob_500) {
+            width: 7rem;
+            bottom: inherit;
+            top: 82px;
+            left: -14px;
+            right: inherit;
+        }
     }
     &__avocado {
         position: absolute;
@@ -1261,6 +1273,7 @@ body {
         }
     }
 }
+
 .catalog-grid { 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1901,6 +1914,37 @@ footer {
 
 }
 
+@keyframes tomato-fell {
+    0% { 
+        top: -100px;
+    }
+    100% {
+        top: 85%;
+    }
+}
+@keyframes tomato-animated {
+    0% {        
+        left: 35%;
+        
+    }
+    100% {
+        left: 80%;
+    }
+}
+@keyframes tomato-rotate {
+    0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// @keyframes bouncing {
+//     0%  {
+//         bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); 
+//     }
+//     100% {
+//         bottom: 50px; box-shadow: 0 50px 50px rgba(0,0,0,0.1);
+//     }
+// }
+
 @keyframes shadow {
     0% {
         box-shadow:0 0 0 0 rgb(0 0 0 / 51%);
@@ -1909,16 +1953,3 @@ footer {
         box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
     }
 }
-@keyframes bonus {
-    0% {
-        font-size: 1.8rem;
-    }
-    50% {
-        font-size: 3rem;
-    }
-    100% {
-        font-size: 1.8rem;
-    }
-}
-
-
