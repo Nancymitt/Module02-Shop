@@ -246,6 +246,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     overflow-x: hidden;
+    overflow-y: clip;
     @media (max-width: $r_tab) {
         max-width: 600px;
     }
@@ -464,11 +465,8 @@ body {
     }
     &__tomato {
         position: absolute;
-        border-radius: 100%;
-        // bottom: 26px;
+        border-radius: 100%;// bottom: 26px;
         left: 35%;
-        //    bottom: 113px;
-        //    right: 0px;
         width: 11rem;
         z-index: -1;
         // animation: bouncing 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both; 
@@ -855,7 +853,7 @@ body {
             margin-top: 2.5rem;
             margin-bottom: 0;
             min-height: 55px;
-            max-width: 25rem;
+            max-width: 31rem;
             line-height: 1.5;
             @media (max-width: $r_desk_hd) {
                 text-align: center;
@@ -1930,7 +1928,7 @@ footer {
         top: -100px;
     }
     100% {
-        top: 82%;
+        top: 84%;
     }
 }
 @keyframes tomato-animated {
@@ -1947,14 +1945,14 @@ footer {
   100% { transform: rotate(360deg); }
 }
 
-@keyframes bouncing {
-    0%  {
-        bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); 
-    }
-    100% {
-        bottom: 50px; box-shadow: 0 50px 50px rgba(0,0,0,0.1);
-    }
-}
+// @keyframes bouncing {
+//     0%  {
+//         bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); 
+//     }
+//     100% {
+//         bottom: 50px; box-shadow: 0 50px 50px rgba(0,0,0,0.1);
+//     }
+// }
 
 @keyframes shadow {
     0% {
