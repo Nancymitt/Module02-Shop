@@ -854,7 +854,7 @@ body {
             color: rgba($green, .7);
             margin-top: 2.5rem;
             margin-bottom: 0;
-            max-height: 55px;
+            min-height: 55px;
             max-width: 31rem;
             line-height: 1.5;
             @media (max-width: $r_desk_hd) {
@@ -864,7 +864,7 @@ body {
             }
             @media (max-width: $r_mob_500) {
                 margin-top: 8px;
-                max-height: 38px;
+                min-height: 38px;
                 font-size: 1.5rem;
             }
         }
@@ -1297,7 +1297,6 @@ body {
     }
     @media (max-width: $r_tab) {
         gap: 1rem;
-    
     }
     &__item {
         border: 1px solid rgba(39, 48, 15, 0.4);
@@ -1378,19 +1377,21 @@ body {
         max-width: 30rem;
         margin-top: 1.8rem;
         margin-bottom: 0;
-        max-height: 61px;
+        min-height: 61px;
         line-height: 1.5;
         @media (max-width: $r_desk_hd) {
             text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
         @media (max-width: $r_tab) {
             font-size: 1.3rem;
-            max-height: 58px;
+            min-height: 58px;
             margin-bottom: 4px;
         }
         @media (max-width: $r_mob_360) {
             margin-top: 1rem;
-            max-height: 48px;
+            min-height: 48px;
         }
     }
     &__price {
