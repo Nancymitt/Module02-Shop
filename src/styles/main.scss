@@ -201,6 +201,7 @@ body {
         }
     }
     &__buttons {
+        position: relative;
         @media (max-width: $r_desk_hd) {
             display: flex;
             align-items: center;
