@@ -75,3 +75,10 @@ var swiper = new Swiper(".categorySwiper", {
   },
 });
 
+// Dropdown
+function openModal() {
+  document.getElementById("dropdown").style.display = "block";
+}
+function classModal() {
+  document.getElementById("dropdown").style.top = "-400px";
+}

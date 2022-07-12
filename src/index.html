@@ -46,16 +46,20 @@
             <div class="header__buttons">
                 <a href="tel:+79453425555" class="header__phone"></a>
                 <button href="#" class="header__menu"></button>
-                <button href="#" class="header__cart">
-                    <span class="header__counter">0</span>
+                <button href="#" class="header__cart" onclick="document.getElementById('Notification').style.visibility='visible'">
+                    <span class="header__counter">1</span>
                 </button>
-                <div class="header__dropdown">
+                <div class="header__dropdown" id="Notification">
                     <div class="header__cover">
-                        <img src="images/catalog/milk.png" alt="Молоко">
+                        <img class="header__img" src="images/catalog/milk.png" alt="Молоко">
                     </div>
                     <p class="header__text">Вы добавили в корзину <a class="header__product" href="#">Молоко топленое</a></p>
+                    <button type="button" class="close" onclick="document.getElementById('Notification').style.visibility='hidden'"></button>
                 </div>
             </div>
+            <!-- <div class="dropdown">
+                Выпадающее окно
+            </div> -->
         </header>
         <div class="container">
             <div class="main__flex">
@@ -77,23 +81,41 @@
                     <div class="main__line">
                         <img class="main__image" src="images/plate.png" alt="">
                     </div>
-                    <button class="main__btn main__btn_01" type="button">
+                    <button class="main__btn main__btn_01" type="button" onclick="document.getElementById('FoodOne').style.visibility='visible'">
                         <span class="main__food">Авокадо</span> 134 руб
                     </button>
-                    <button class="main__btn main__btn_02" type="button">
+                    <div class="main__about main__about_1" id="FoodOne">
+                        <h3 class="main__title">Авокадо</h3>
+                        <p class="main__description">Авокадо, Первый сорт, 1кг</p>
+                        <p class="main__price">134 руб/шт</p>
+                        <button class="close" onclick="document.getElementById('FoodOne').style.visibility='hidden'"></button>
+                    </div>
+                    <button class="main__btn main__btn_02" type="button" onclick="document.getElementById('FoodTwo').style.visibility='visible'">
                         <span class="main__food">Картофель</span> 169руб
                     </button>
-                    <button class="main__btn main__btn_03" type="button">
+                    <div class="main__about main__about_2" id="FoodTwo">
+                        <h3 class="main__title">Картофель</h3>
+                        <p class="main__description">Картофель Молодой, Свежий урожай, 1кг</p>
+                        <p class="main__price">169 руб/кг</p>
+                        <button class="close" onclick="document.getElementById('FoodTwo').style.visibility='hidden'"></button>
+                    </div>
+                    <button class="main__btn main__btn_03" type="button" onclick="document.getElementById('FoodThree').style.visibility='visible'">
                         <span class="main__food">Томаты</span> 215руб
                     </button>
+                    <div class="main__about main__about_3" id="FoodThree">
+                        <h3 class="main__title">Томаты</h3>
+                        <p class="main__description">Томаты красные, Краснодарский край, 1кг</p>
+                        <p class="main__price">215 руб/кг</p>
+                        <button class="close" onclick="document.getElementById('FoodThree').style.visibility='hidden'"></button>
+                    </div>
                 </div>
-            </div>            
+            </div>
         </div>
         <img class="main__tomato" src="images/tomato2.png" alt="">
         <img class="main__avocado" src="images/avocado.png" alt="">
         <img class="main__cucumber" src="images/cucumber.png" alt="">
         <img class="main__pepper" src="images/pepper.png" alt="">
-        <img class="main__beans" src="images/beans.png" alt="">        
+        <img class="main__beans" src="images/beans.png" alt="">
     </div>
     <section class="offer">
         <div class="container">
@@ -102,7 +124,7 @@
                 <span class="title__span">предлагаем</span>
             </h1>
             <div class="offer__text">
-                <p class="description description_size-m">Органика — это целостная система производства по-настоящему чистой, натуральной и полезной продукции</p>                
+                <p class="description description_size-m">Органика — это целостная система производства по-настоящему чистой, натуральной и полезной продукции</p>
             </div>
             <div class="slider">
                 <div class="swiper offerSwiper">
@@ -116,7 +138,7 @@
                                     В наши дни появилась мода на&nbsp;здоровое питание, поэтому&nbsp;на рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_pasta">
                             <h3 class="swiper-slide__title">
@@ -128,7 +150,7 @@
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
-                            
+
                         </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_steaks">
                             <h3 class="swiper-slide__title">
@@ -139,7 +161,7 @@
                                     В наши дни появилась мода на&nbsp;здоровое питание, поэтому&nbsp;на рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
-                            </div>                            
+                            </div>
                         </div>
 
                         <!-- <div class="swiper-slide swiper-slide_white swiper-slide_milk">
@@ -152,7 +174,7 @@
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
-                            
+
                         </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_pasta">
                             <h3 class="swiper-slide__title">
@@ -164,7 +186,7 @@
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
-                            
+
                         </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_steaks">
                             <h3 class="swiper-slide__title">
@@ -176,8 +198,8 @@
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
-                            
-                        </div>                      
+
+                        </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_milk">
                             <h3 class="swiper-slide__title">
                               Молочные продукты
@@ -188,7 +210,7 @@
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
-                            
+
                         </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_pasta">
                             <h3 class="swiper-slide__title">
@@ -199,7 +221,7 @@
                                     В наши дни появилась мода на&nbsp;здоровое питание, поэтому&nbsp;на рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="swiper-slide swiper-slide_white swiper-slide_steaks">
                             <h3 class="swiper-slide__title">
@@ -211,9 +233,9 @@
                                 </p>
                                 <a class="swiper-slide__link" href="#">Подробнее</a>
                             </div>
-                            
+
                         </div> -->
-                        
+
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -243,18 +265,18 @@
                     <li class="about__item">
                         Вкус
                     </li>
-                </ul>                
+                </ul>
             </div>
         </div>
     </section>
     <section class="trends">
         <div class="container">
             <h1 class="title">
-                Наши 
+                Наши
                 <span class="title__span">новинки</span>
             </h1>
             <div class="trends__text">
-                <p class="description description_size-m">Будь в&nbsp;тренде с&nbsp;современым миром, и&nbsp;будь здоров вместе с&nbsp;нами</p>                
+                <p class="description description_size-m">Будь в&nbsp;тренде с&nbsp;современым миром, и&nbsp;будь здоров вместе с&nbsp;нами</p>
             </div>
             <div class="slider">
                 <div class="swiper trendsSwiper">
@@ -277,7 +299,7 @@
                                 </div>
                                 <a href="#" class="link link_max">В корзину</a>
                               </div>
-                            
+
                         </div>
 
                         <div class="swiper-slide">
@@ -318,7 +340,7 @@
                                 </div>
                                 <a href="#" class="link link_max">В корзину</a>
                             </div>
-                        </div>                     
+                        </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -381,7 +403,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -401,7 +423,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -421,7 +443,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -441,7 +463,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -461,7 +483,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -481,7 +503,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -501,7 +523,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -521,7 +543,7 @@
                         </div>
                         <a href="#" class="link link_min">В корзину</a>
                     </div>
-                    
+
                 </div>
 
 
@@ -547,7 +569,7 @@
                         <li class="delivery__item delivery__visa"></li>
                         <li class="delivery__item delivery__paypal"></li>
                     </ul>
-                </div>     
+                </div>
             </div>
 
         </div>
@@ -557,9 +579,9 @@
             <div class="contact-box">
                 <div class="contact-box__item">
                     <h1 class="title title_block">
-                        Не смогли 
+                        Не смогли
                         <span class="title__span">определиться</span>
-                    </h1>                    
+                    </h1>
                     <div class="contact-box__text">
                         <p class="contact-box__description">Если у вас остались вопросы, вы можете задать отправить нам ваши данные. Наши менеджеры  свяжутся с вами в течении рабочего дня.
                         </p>
@@ -591,7 +613,7 @@
     </section>
     <footer>
         <div class="container">
-            <div class="footer__box">                    
+            <div class="footer__box">
                 <a href="#" class="logo logo_footer"></a>
                 <div class="footer__info">
                     <ul class="footer__list">
@@ -631,7 +653,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>                    
+                </div>
             </div>
             <div class="footer__text">
                 <p>&copy; 2020, Все права защищены</p>
@@ -639,7 +661,7 @@
             </div>
         </div>
     </footer>
-    
+
 
 </body>
 </html>

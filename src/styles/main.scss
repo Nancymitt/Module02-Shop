@@ -30,7 +30,7 @@ html {
 body {
     background-image: url(..//images/background.png);
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
@@ -132,7 +132,7 @@ body {
                 opacity: 1;
                 background-color: $white;
             }
-        }        
+        }
     }
     &__counter {
         color: $white;
@@ -211,7 +211,80 @@ body {
             gap: 1.4rem;
         }
     }
-    
+    &__dropdown {
+        @media (max-width: $r_desk_full_1750) {
+            right: -3px;
+            opacity: .9;
+        }
+        @media (max-width: $r_desk_1280) {
+            display: none;
+        }
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: -42px;
+        bottom: -119px;
+        border-radius: 20px;
+        background-color: $white;
+        width: 280px;
+        height: 95px;
+        padding: 20px 25px;
+        z-index: 1;
+        box-shadow: 0px 0px 33px 0 rgba($green, .3);
+        box-sizing: border-box;
+        gap: 20px;
+        visibility: hidden;
+        // Схема отрисовки треугольника на выпадашке
+        &::after {
+            @media (max-width: $r_desk_full_1750) {
+                right: 13px;
+                opacity: .9;
+            }
+            content: '';
+            border: 13px solid transparent;
+            border-bottom: 28px solid $white;
+            position: absolute;
+            top: -31px;
+            right: 46px;
+        }
+    }
+    &__cover {
+        position: relative;
+        width: 4rem;
+        height: 6rem;
+        overflow: hidden;
+    }
+    &__img {
+        position: absolute;
+        width: 4.5rem;
+        height: 6.6rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+    &__product {
+        display: inline-block;
+        columns: $green;
+        text-decoration: none;
+        border-bottom: 1px solid $green;
+
+    }
+
+}
+.close {
+    background-image: url(/src/images/close.svg);
+    border: none;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 2rem;
+    cursor: pointer;
 }
 .logo {
     display: block;
@@ -246,18 +319,18 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     overflow-y: clip;
     @media (max-width: $r_tab) {
         max-width: 600px;
     }
     @media (max-width: $r_mob_400) {
         max-width: 330px;
-    } 
+    }
 }
 .main {
     position: relative;
-    padding-bottom: 18.7rem;
+    padding-bottom: 12.7rem;
     z-index: 0;
     overflow-x: hidden;
     @media (max-width: $r_tab) {
@@ -302,6 +375,7 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 30px;
+        padding-bottom: 6rem;
         @media (max-width: $r_desk_1120) {
             padding-top: 3rem;
             padding-bottom: 9rem;
@@ -358,7 +432,7 @@ body {
     &__image {
         width: 92%;
         border-radius: 100%;
-        animation: shadow 6s ease-in-out forwards;        
+        animation: shadow 6s ease-in-out forwards;
     }
     &__imagemobi {
         display: none;
@@ -367,9 +441,9 @@ body {
             max-width: 300px;
             margin: 0 auto;
             margin-top: 3rem;
-            animation: shadow 6s ease-in-out forwards; 
+            animation: shadow 6s ease-in-out forwards;
             border-radius: 100%;
-            
+
         }
         @media (max-width: $r_mob_500) {
             max-width: 220px;
@@ -382,7 +456,7 @@ body {
         }
         @media (max-width: $r_tab) {
             flex-basis: 100%;
-            padding-top: 0;           
+            padding-top: 0;
         }
     }
     &__btn {
@@ -410,8 +484,8 @@ body {
                 background-color: $orange;
                 box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
             }
-        }   
-            
+        }
+
         &_01 {
             top: 46px;
             left: 67px;
@@ -459,6 +533,65 @@ body {
             }
         }
     }
+    &__about {
+        @media (max-width: $r_desk_full_1750) {
+            opacity: .9;
+        }
+        @media (max-width: $r_desk_1280) {
+            display: none;
+        }
+        position: absolute;
+        border-radius: 20px;
+        background-color: $white;
+        width: 240px;
+        height: 175px;
+        padding: 25px 30px;
+        z-index: 1;
+        box-shadow: 0px 0px 33px 0 rgba($green, .3);
+        box-sizing: border-box;
+        visibility: hidden;
+        &_1 {
+            left: -62px;
+            top: 103px;
+            height: 153px;
+        }
+        &_2 {
+            @media (max-width: $r_desk_full_1750) {
+                right: -4px;
+            }
+            @media (max-width: $r_desk_1350) {
+                top: 170px;
+            }
+            right: -110px;
+            top: 250px;
+        }
+        &_3 {
+            right: 308px;
+            bottom: -44px;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        font-family: $font-cormorant;
+        margin-bottom: 1.2rem;
+        margin-top: 1rem;
+        color: $green;
+    }
+    &__description {
+        font-size: 1.4rem;
+        font-family: $font-jost;
+        color: rgba($green, 0.7);
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+
+    }
+    &__price {
+        font-size: 1.6rem;
+        font-family: $font-jost;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
     &__food {
         display: block;
         color: rgba($green, .8);
@@ -468,9 +601,9 @@ body {
         position: absolute;
         border-radius: 100%;// bottom: 26px;
         left: 35%;
-        width: 11rem;
+        width: 10.5rem;
         z-index: -1;
-        // animation: bouncing 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both; 
+        // animation: bouncing 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both;
        animation: tomato-fell 2s linear forwards, tomato-animated 3s ease-out forwards 2s, tomato-rotate 3s ease-out 2s;
        @media (max-width: $r_tab_900) {
             width: 9rem;
@@ -494,7 +627,7 @@ body {
     }
     &__avocado {
         position: absolute;
-        top: 85px;
+        top: 55px;
         right: 0;
         width: 17.8rem;
         z-index: -1;
@@ -507,7 +640,7 @@ body {
             width: 10.8rem;
             top: 88px;
             right: -38px
-        }        
+        }
     }
     &__cucumber {
         position: absolute;
@@ -584,7 +717,7 @@ body {
     &__span {
         font-style: italic;
     }
-    &_block {        
+    &_block {
         .title__span {
             display: block;
         }
@@ -646,10 +779,10 @@ body {
     &_min {
         padding: 2rem 3.3rem;
         font-size: 1.4rem;
-        box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15); 
+        box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
     }
 }
-.offer {    
+.offer {
     padding-top: 2rem;
     padding-bottom: 12.8rem;
     @media (max-width: $r_tab) {
@@ -669,7 +802,7 @@ body {
 }
 .slider {
     overflow: hidden;
-    padding-top: 9.4rem;    
+    padding-top: 9.4rem;
     @media (max-width: $r_tab) {
         max-width: 450px;
         margin: 0 auto;
@@ -971,8 +1104,8 @@ body {
         cursor: pointer;
         width: 50px;
         height: 50px;
-        padding: 0;        
-        background-color: transparent;        
+        padding: 0;
+        background-color: transparent;
         background-position: center center;
         border: 1px solid $green;
         border-radius: 100%;
@@ -1022,7 +1155,7 @@ body {
     @media (max-width: $r_mob_360) {
         padding-bottom: 3rem;
         padding-top: 5.5rem;
-    }    
+    }
     &__box {
         margin-top: 7rem;
         display: flex;
@@ -1200,11 +1333,11 @@ body {
             height: 2.5rem;
             @media (max-width: $r_mob_500) {
                 font-size: 1.25rem;
-                
+
             }
         }
     }
-    
+
 }
 .category {
     list-style-type: none;
@@ -1220,11 +1353,11 @@ body {
         justify-content: center;
         font-size: 1.4rem;
         gap: 1rem;
-    } 
+    }
      @media (max-width: $r_mob_500) {
         display: none;
-    }       
-    
+    }
+
     &__item {
         flex-basis: 230px;
         text-align: center;
@@ -1285,7 +1418,7 @@ body {
         }
     }
 }
-.catalog-grid { 
+.catalog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -1309,15 +1442,15 @@ body {
             padding: 2.2rem 2rem 2.8rem;
         }
         @media (max-width: $r_mob_500) {
-           
+
             padding: 1.2rem 1rem 1.8rem;
-            text-align: center;            
+            text-align: center;
         }
         @media (max-width: 400px) {
             padding: 1rem 0.7rem 2rem;
 
         }
-        
+
        &:hover {
         box-shadow: 0 0 0 2px rgba($green, .4) inset;
        }
@@ -1341,7 +1474,7 @@ body {
         }
         @media (max-width: 360px) {
             height: 75px;
-        }            
+        }
     }
     &__image {
         height: 100%;
@@ -1351,7 +1484,7 @@ body {
         @media (max-width: $r_mob_360) {
             width: 80%;
             height: 80%;
-        } 
+        }
     }
     &__title {
         font-family: $font-cormorant;
@@ -1408,7 +1541,7 @@ body {
         @media (max-width: $r_mob_500) {
             font-size: 1.5rem;
             margin-bottom: 1.6rem;
-            
+
         }
     }
     &__footer {
@@ -1417,10 +1550,10 @@ body {
         align-items: center;
         gap: 5%;
     }
-    
+
 }
 .delivery {
-    
+
     padding-bottom: 6rem;
     @media (max-width: $r_mob_360) {
         padding-top: 2rem;
@@ -1445,7 +1578,7 @@ body {
             font-size: 1.5rem;
         }
     }
-    &__text {        
+    &__text {
         flex-basis: 44%;
         @media (max-width: $r_tab) {
             flex-basis: auto;
@@ -1532,7 +1665,7 @@ body {
         @media (max-width: $r_mob_360) {
             width: 64px;
         }
-    }   
+    }
 }
 .contact {
     padding-top: 13rem;
@@ -1611,14 +1744,14 @@ body {
                 align-items: center;
             }
         }
-        &__item {            
+        &__item {
             margin-bottom: 2rem;
             @media (max-width: $r_tab) {
                 font-size: 1.6rem;
             }
             @media (max-width: $r_mob_360) {
                 margin-bottom: 1rem;
-            }         
+            }
         }
         &__link {
             color: $green;
@@ -1765,7 +1898,7 @@ footer {
         padding-top: 4.9rem;
         padding-bottom: 4rem;
     }
-        
+
 }
 .logo_footer {
     flex-basis: 18rem;
@@ -1783,7 +1916,7 @@ footer {
         margin: 0 auto 3rem;
     }
 }
-.footer {       
+.footer {
     &__box {
         display: flex;
         justify-content: space-between;
@@ -1810,7 +1943,7 @@ footer {
             flex-direction: column;
             text-align: center;
         }
-    }    
+    }
     &__list {
         list-style-type: none;
         padding-left: 0;
@@ -1886,7 +2019,7 @@ footer {
         }
         @media (max-width: $r_mob_360) {
             gap: 3.5rem;
-        }    
+        }
         &__link {
             display: block;
             width: 4.6rem;
@@ -1906,7 +2039,7 @@ footer {
             &:hover {
                 opacity: 1;
             }
-        }    
+        }
         &__vk {
             background-image: url(..//images/vk.svg);
             background-size: 2.3rem;
@@ -1960,7 +2093,7 @@ footer {
 }
 
 @keyframes tomato-fell {
-    0% { 
+    0% {
         top: -100px;
     }
     100% {
@@ -1968,9 +2101,9 @@ footer {
     }
 }
 @keyframes tomato-animated {
-    0% {        
+    0% {
         left: 35%;
-        
+
     }
     100% {
         left: 80%;
@@ -1983,7 +2116,7 @@ footer {
 
 // @keyframes bouncing {
 //     0%  {
-//         bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); 
+//         bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5);
 //     }
 //     100% {
 //         bottom: 50px; box-shadow: 0 50px 50px rgba(0,0,0,0.1);
@@ -1993,7 +2126,7 @@ footer {
 @keyframes shadow {
     0% {
         box-shadow:0 0 0 0 rgb(0 0 0 / 51%);
-    }    
+    }
     100% {
         box-shadow:11px 34px 52px -18px rgb(0 0 0 / 51%);
     }
