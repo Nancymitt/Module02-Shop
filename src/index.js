@@ -82,3 +82,19 @@ function openModal() {
 function classModal() {
   document.getElementById("dropdown").style.top = "-400px";
 }
+
+// Smooth
+const anchors = document.querySelectorAll('.header__nav a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+  e.preventDefault()
+   
+  const blockID = anchor.getAttribute('href').substr(1)
+   
+  document.getElementById(blockID).scrollIntoView({
+  behavior: 'smooth',
+  block: 'start'
+  })
+  })
+}

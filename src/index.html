@@ -24,22 +24,22 @@
             <nav class="header__navigation">
                 <ul class="header__nav">
                     <li class="header__item">
-                        <a href="#" class="header__link">Наша продукция</a>
+                        <a href="#offer" class="header__link">Наша продукция</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">О компании</a>
+                        <a href="#about" class="header__link">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Новинки</a>
+                        <a href="#trends" class="header__link">Новинки</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Каталог</a>
+                        <a href="#catalog" class="header__link">Каталог</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Доставка</a>
+                        <a href="#delivery" class="header__link">Доставка</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">Контакты</a>
+                        <a href="#contact" class="header__link">Контакты</a>
                 </ul>
             </nav>
             <a href="tel:+79453425555" class="header__tel">+7 945 342 55 55</a>
@@ -54,12 +54,12 @@
                       <span></span>
                     </label>
                     <ul class="menu__box">
-                      <li><a class="hamburger-menu__item" href="#">Наша продукция</a></li>
-                      <li><a class="hamburger-menu__item" href="#">О компании</a></li>
-                      <li><a class="hamburger-menu__item" href="#">Новинки</a></li>
-                      <li><a class="hamburger-menu__item" href="#">Каталог</a></li>
-                      <li><a class="hamburger-menu__item" href="#">Доставка</a></li>
-                      <li><a class="hamburger-menu__item" href="#">Контакты</a></li>
+                      <li><a class="hamburger-menu__item" href="#offer">Наша продукция</a></li>
+                      <li><a class="hamburger-menu__item" href="#about">О компании</a></li>
+                      <li><a class="hamburger-menu__item" href="#trends">Новинки</a></li>
+                      <li><a class="hamburger-menu__item" href="#catalog">Каталог</a></li>
+                      <li><a class="hamburger-menu__item" href="#delivery">Доставка</a></li>
+                      <li><a class="hamburger-menu__item" href="#contact">Контакты</a></li>
                     </ul>
                   </div>
                 <button href="#" class="header__cart" onclick="document.getElementById('Notification').style.visibility='visible'">
@@ -73,9 +73,6 @@
                     <button type="button" class="close" onclick="document.getElementById('Notification').style.visibility='hidden'"></button>
                 </div>
             </div>
-            <!-- <div class="dropdown">
-                Выпадающее окно
-            </div> -->
         </header>
         <div class="container">
             <div class="main__flex">
@@ -89,7 +86,7 @@
                         </p>
                         <img class="main__imagemobi" src="images/plate.png" alt="">
                         <div class="main__link">
-                            <a href="#" class="link">Перейти в каталог</a>
+                            <a href="#catalog" class="link">Перейти в каталог</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +130,7 @@
         <img class="main__pepper" src="images/pepper.png" alt="">
         <img class="main__beans" src="images/beans.png" alt="">
     </div>
-    <section class="offer">
+    <section class="offer" id="offer">
         <div class="container">
             <h1 class="title title_block">
                 Что мы
@@ -260,7 +257,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h1 class="title title_block">
                 В чем наша
@@ -285,7 +282,7 @@
             </div>
         </div>
     </section>
-    <section class="trends">
+    <section class="trends" id="trends">
         <div class="container">
             <h1 class="title">
                 Наши
@@ -365,7 +362,7 @@
             </div>
         </div>
     </section>
-    <main class="catalog">
+    <main class="catalog" id="catalog">
         <div class="container">
             <h1 class="title">
                 Каталог
@@ -567,7 +564,7 @@
             <button class="catalog__btn">Загрузить еще</button>
         </div>
     </main>
-    <section class="delivery">
+    <section class="delivery" id="delivery">
         <div class="container">
             <h1 class="title">
                 Доставка
@@ -590,7 +587,7 @@
 
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="contact-box">
                 <div class="contact-box__item">
