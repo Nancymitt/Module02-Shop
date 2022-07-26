@@ -103,12 +103,9 @@ for (let anchor of anchors) {
 
 const burgerOpen = document.getElementById('header__burger');
 const modal = document.getElementById('burger__modal');
-
 const overlay = document.getElementById('burger__overlay');
 const burgerClose = document.getElementById('burger__close');
-const burgerLink = document.getElementsByClassName('burger__link');
-
-const bodyLock = document.getElementsByTagName('body')[0];
+const bodyLock = document.body;
 
 burgerOpen.addEventListener('click', () => {
     modal.classList.add('active');
@@ -122,4 +119,9 @@ function closeBurger(){
 
 overlay.addEventListener('click',closeBurger);
 burgerClose.addEventListener('click',closeBurger);
-burgerLink.addEventListener('click',closeBurger);
+
+const theLinks = document.querySelectorAll(".burger__link");
+theLinks.forEach(link => link.addEventListener("click", ()=>{
+  bodyLock.classList.remove('lock');
+  modal.classList.remove('active');
+}))
