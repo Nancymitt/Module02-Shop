@@ -2176,6 +2176,29 @@ footer {
     }
 
 }
+.button-up {
+    background-color: $orange;
+    color: $white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2rem .5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+        background-color: $dark-orange;
+    }
+    &.hidden {
+        opacity: 0;
+    }
+    &.visible{
+        opacity: 1;
+    }
+}
 
 @keyframes tomato-fell {
     0% {

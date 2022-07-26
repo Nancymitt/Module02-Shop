@@ -124,4 +124,30 @@ const theLinks = document.querySelectorAll(".burger__link");
 theLinks.forEach(link => link.addEventListener("click", ()=>{
   bodyLock.classList.remove('lock');
   modal.classList.remove('active');
-}))
+}));
+
+// Button Up
+window.onscroll = function(){scrollFunction()};
+
+const upbuttons = document.querySelectorAll(".button-up");
+
+for (const upbutton of upbuttons) {
+    upbutton.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+e.preventDefault();
+const href = this.getAttribute("href");
+
+document.querySelector(href).scrollIntoView({
+    behavior: "smooth"
+});
+}
+
+function scrollFunction(){
+    if ( document.body.scrollTop > 500 || document.documentElement.scrollTop > 500){
+        document.getElementById('btnUp').className = 'button-up visible';
+    } else {
+        document.getElementById('btnUp').className = 'button-up hidden';
+    }
+}
