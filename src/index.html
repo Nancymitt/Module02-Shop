@@ -43,25 +43,12 @@
                 </ul>
             </nav>
             <a href="tel:+79453425555" class="header__tel">+7 945 342 55 55</a>
+
             <div class="header__buttons">
                 <a href="tel:+79453425555" class="header__phone"></a>
-                <!-- <button href="#" class="header__menu"></button> -->
 
-                <!-- Menu-burger -->
-                <div class="hamburger-menu">
-                    <input id="menu__toggle" type="checkbox" />
-                    <label class="menu__btn" for="menu__toggle">
-                      <span></span>
-                    </label>
-                    <ul class="menu__box">
-                      <li><a class="hamburger-menu__item" href="#offer">Наша продукция</a></li>
-                      <li><a class="hamburger-menu__item" href="#about">О компании</a></li>
-                      <li><a class="hamburger-menu__item" href="#trends">Новинки</a></li>
-                      <li><a class="hamburger-menu__item" href="#catalog">Каталог</a></li>
-                      <li><a class="hamburger-menu__item" href="#delivery">Доставка</a></li>
-                      <li><a class="hamburger-menu__item" href="#contact">Контакты</a></li>
-                    </ul>
-                  </div>
+                <button href="#" class="header__burger" id="header__burger"></button>
+
                 <button href="#" class="header__cart" onclick="document.getElementById('Notification').style.visibility='visible'">
                     <span class="header__counter">1</span>
                 </button>
@@ -675,6 +662,37 @@
         </div>
     </footer>
 
+
+                <!-- Modal burger -->
+<div class="burger__modal" id="burger__modal">
+    <div class="burger__overlay" id="burger__overlay"></div>
+    <div class="burger__window" id="burger__window">
+        <div class="burger__wrapper">
+            <a href="#" class="logo"></a>
+            <button class="burger__close" id="burger__close"></button>
+            <ul class="burger__menu" id="menu">
+                <li class="burger__item">
+                    <a href="#offer" class="burger__link">Наша продукция</a>
+                </li>
+                <li class="burger__item">
+                    <a href="#about" class="burger__link">О компании</a>
+                </li>
+                <li class="burger__item">
+                    <a href="#trends" class="burger__link">Новинки</a>
+                </li>
+                <li class="burger__item">
+                    <a href="#catalog" class="burger__link">Каталог</a>
+                </li>
+                <li class="burger__item">
+                    <a href="#delivery" class="burger__link">Доставка</a>
+                </li>
+                <li class="burger__item">
+                    <a href="#contact" class="burger__link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

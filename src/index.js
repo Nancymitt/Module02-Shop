@@ -97,4 +97,29 @@ for (let anchor of anchors) {
   block: 'start'
   })
   })
+};
+
+// burger
+
+const burgerOpen = document.getElementById('header__burger');
+const modal = document.getElementById('burger__modal');
+
+const overlay = document.getElementById('burger__overlay');
+const burgerClose = document.getElementById('burger__close');
+const burgerLink = document.getElementsByClassName('burger__link');
+
+const bodyLock = document.getElementsByTagName('body')[0];
+
+burgerOpen.addEventListener('click', () => {
+    modal.classList.add('active');
+    bodyLock.classList.add('lock');
+});
+
+function closeBurger(){
+    modal.classList.remove('active');
+    bodyLock.classList.remove('lock');
 }
+
+overlay.addEventListener('click',closeBurger);
+burgerClose.addEventListener('click',closeBurger);
+burgerLink.addEventListener('click',closeBurger);
