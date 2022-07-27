@@ -126,7 +126,7 @@ theLinks.forEach(link => link.addEventListener("click", ()=>{
   modal.classList.remove('active');
 }));
 
-// Button Up
+//Button Up
 window.onscroll = function(){scrollFunction()};
 
 const upbuttons = document.querySelectorAll(".button-up");

@@ -1472,6 +1472,7 @@ body {
 }
 .category-swiper {
     display: none;
+    overflow-x: hidden;
     @media (max-width: $r_mob_500) {
         display: block;
         text-align: center;
